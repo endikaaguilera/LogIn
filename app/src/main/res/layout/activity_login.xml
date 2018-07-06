@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loginViewContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".login.LoginActivity">
+
+    <ScrollView
+        android:id="@+id/loginViewScroll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/loginViewContentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:scrollbars="vertical">
+
+            <ImageView
+                android:id="@+id/logoImageView"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/oval_background"
+                android:contentDescription="@string/app_logo"
+                android:padding="8dp"
+                android:src="@drawable/ic_face_120dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--<ViewSwitcher-->
+            <!--android:id="@+id/viewSwitcher"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/logoImageView">-->
+
+            <!--<include layout="@layout/sign_up_content" />-->
+
+            <!--</ViewSwitcher>-->
+
+            <include
+                android:id="@+id/container"
+                layout="@layout/login_content" />
+
+            <Button
+                android:id="@+id/loginBtn"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="48dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/rounded_background"
+                android:text="@string/login"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/signUpBtn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/container" />
+
+            <Button
+                android:id="@+id/signUpBtn"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="48dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/rounded_background"
+                android:enabled="false"
+                android:text="@string/sign_up"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/loginBtn"
+                app:layout_constraintTop_toBottomOf="@+id/container"
+                tools:enabled="false" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
